@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <style>
+            @import url(style.css);
+            p.highlight {
+                color: red;
+            }
+            svg {
+                background-color: rgb(41, 41, 36);
+            }
+        </style>
+        <script src="./dist/pong.js"></script>
+    </head>
+    <body>
+        <h1>Pong</h1>
+        Reset Before Starting a new Game!
+        <div id="controls">
+            <h2>Controls:</h2>
+            <h3>Player 1</h3>
+                <table>
+                <tr><td>Go Up</td><td><div id="KeyW" class="key">W</div></td></tr>
+                <tr><td>Go Down</td><td><div id="KeyS" class="key">S</div></td></tr>
+                <tr><td>Ultimate</td><td><div id="KeyA" class="key">A</div></td><td>Will teleport the ball to next to enemy goal</td></tr>
+                </table>
+            <h3>Player 2</h3>
+                <table>
+                <tr><td>Go Up</td><td><div id="ArrowUp" class="key">&#8679;</div></td></tr>
+                <tr><td>Go Down</td><td><div id="ArrowDown" class="key">&#8681;</div></td></tr>
+                <tr><td>Ultimate</td><td><div id="ArrowLeft" class="key">&#8678;</div></td><td>Will teleport the ball to next to enemy goal</td></tr>
+                </table>
+            <button id ="OnePlayer" >One Player</button>
+            <button id = "TwoPlayer" >Two Player</button>
+            <button id = "Reset">Reset</button>
+        </div>
+
+        <svg id="canvas" width="1000" height="600">
+            <rect id= "rect1" x="15" y="0" width="10" height="200" fill="#FFFFFF"/>
+            <rect id= "rect2" x="0" y="0" width="10" height="200" fill="#FFFFFF"/>
+            <rect id= "ball" x="0" y="0" width="10" height="10" fill ="#FFFFFF"/>
+            <text id = "scrPyr" x = "200" y= "100" class="score"/>
+            <text id = "scrCmp" x = "750" y= "100" class="score"/> 
+            <text id = "ultStat1" x = "50" y="50" fill ="#FFFFFF">Not Ready</text>
+            <text id = "ultStat2" x = "850" y="50" fill ="#FFFFFF">Not Ready</text>
+        </svg>
+        
+    </body>
+</html>
