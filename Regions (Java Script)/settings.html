@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Fencing</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue_grey-indigo.min.css">
+        <link rel="stylesheet" href="css/regionApp.css" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <link rel="shortcut icon" sizes="196x196" href="images/icon.png" />
+        <link rel="apple-touch-icon-precomposed" href="images/icon.png" />
+    </head>
+    
+    <body>
+        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+          <header class="mdl-layout__header" style="background-color:#424242;">
+            <button onclick="backButton();" class="mdl-layout-icon mdl-button mdl-js-button mdl-button--icon"> 
+              <i class="material-icons">arrow_back</i>
+            </button>
+            <div class="mdl-layout__header-row">
+              <span class="mdl-layout-title" id="headerBarTitle">Settings</span>
+            </div>
+          </header>
+          <main class="mdl-layout__content" style="background-color:#525252; display: block;">
+              <ul id="settings" class="demo-list-control mdl-list">
+
+                  <li class="mdl-list__item">
+                    <span class="mdl-list__item-primary-content">
+                      <i class="material-icons  mdl-list__item-avatar">flag</i>
+                      <span id="fenceDistance">Max Fence Distance : </span>
+                    </span>
+                    <span class="mdl-list__item-secondary-action">
+                      <button id="removeFenceDistance" onclick="changeFenceDistance(false);" class="mdl-layout-icon mdl-button mdl-js-button mdl-button--icon"> 
+                        <i class="material-icons">remove</i>
+                      </button>
+                      <button id="addFenceDistance" onclick="changeFenceDistance(true);" class="mdl-layout-icon mdl-button mdl-js-button mdl-button--icon"> 
+                        <i class="material-icons">add</i>
+                      </button>
+                    </span>
+                  </li>
+
+                  <li class="mdl-list__item">
+                      <span class="mdl-list__item-primary-content">
+                        <i class="material-icons  mdl-list__item-avatar">track_changes</i>
+                        <span id="GPSAccuracy">Min GPS Accuracy : </span>
+                      </span>
+                      <span class="mdl-list__item-secondary-action">
+                        <button id="removeGPSAccuracy" onclick="changeAccuracy(false);" class="mdl-layout-icon mdl-button mdl-js-button mdl-button--icon"> 
+                          <i class="material-icons">remove</i>
+                        </button>
+                        <button id="addGPSAccuracy" onclick="changeAccuracy(true);" class="mdl-layout-icon mdl-button mdl-js-button mdl-button--icon"> 
+                          <i class="material-icons">add</i>
+                        </button>
+                      </span>
+                  </li>
+
+                  <li class="mdl-list__item">
+                      <span class="mdl-list__item-primary-content">
+                        <i class="material-icons  mdl-list__item-avatar">opacity</i>
+                        <span id="fillOpacity">Polygon's Opacity : </span>
+                      </span>
+                      <span class="mdl-list__item-secondary-action">
+                        <button id="removeFillOpacity" onclick="changeFillOpacity(false);" class="mdl-layout-icon mdl-button mdl-js-button mdl-button--icon"> 
+                          <i class="material-icons">remove</i>
+                        </button>
+                        <button id="addFillOpacity" onclick="changeFillOpacity(true);" class="mdl-layout-icon mdl-button mdl-js-button mdl-button--icon"> 
+                          <i class="material-icons">add</i>
+                        </button>
+                      </span>
+                  </li>
+
+                  <li class="mdl-list__item">
+                      <span class="mdl-list__item-primary-content">
+                        <i class="material-icons  mdl-list__item-avatar">bubble_chart</i>
+                        <span id="pointRadius">Point's Radius : </span>
+                      </span>
+                      <span class="mdl-list__item-secondary-action">
+                        <button id="removePointRadius" onclick="changePointRadius(false);" class="mdl-layout-icon mdl-button mdl-js-button mdl-button--icon"> 
+                          <i class="material-icons">remove</i>
+                        </button>
+                        <button id="addPointRadius" onclick="changePointRadius(true);" class="mdl-layout-icon mdl-button mdl-js-button mdl-button--icon"> 
+                          <i class="material-icons">add</i>
+                        </button>
+                      </span>
+                  </li>
+                </ul>
+          </main>
+          <div id="toast" class="mdl-js-snackbar mdl-snackbar">
+              <div class="mdl-snackbar__text"></div>
+              <button class="mdl-snackbar__action" type="button"></button>
+          </div>
+        </div>
+        
+        <!--   JavaScript files:   -->
+        <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+        <script type="text/javascript" src="https://geographiclib.sourceforge.io/scripts/geographiclib.min.js"></script>
+        <script src="js/shared.js"></script>
+		    <script src="js/utility.js"></script>
+        <script src="js/settings.js"></script>
+    </body>
+</html>

@@ -1,0 +1,90 @@
+html, body { 
+    height: 100%; 
+    margin: 0; 
+    padding: 0; 
+}
+
+#map {
+    width: 100%;
+    position: absolute;
+    /* view height, minus header bar height and room for buttons */
+    height: calc(100vh);
+    z-index: -1;
+
+}
+
+#controls{
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    bottom: 5px;
+    width: calc(100vw - 10px);
+    display: flex;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: white;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+#controls button{
+    color: white;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#hud {
+    position: fixed;
+    top: 64px; /* header is 44px high */
+    padding-left: 5px;
+    left: 2px;  
+    font-size: 1em;
+    
+    /* white with black outline: */
+    color: white;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;  
+}
+
+#header{
+    position: fixed;
+    top: 10px;
+    width: calc(30vw);
+    padding-left: 5px;
+    padding-right: 5px;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#title{
+    position: fixed;
+    left: calc(30vw);
+    width: calc(40vw);
+    top: 10px;
+    display: flex;
+    justify-content: center;
+    font-size: 1.5em;
+    font-family: 'Roboto';
+    color: white;
+    background-color: rgba(158, 158, 158, 0.2);
+}
+
+#regionsList li span span{
+    color: #efefef;
+}
+
+.material-icons.md-light { 
+    color: rgba(255, 255, 255, 1); 
+}
+
+#regionsList li:hover{
+    background-color: rgba(158, 158, 158, 0.1); 
+}
+#settings li{
+    color: white;
+}
+
